@@ -1,0 +1,21 @@
+﻿<h1>{{title}}</h1>
+JavaScript:
+<pre>
+  "L": function () {
+    return function (a) {
+      return L($.trim(a));
+    }
+  }
+</pre>
+
+.NET:
+<pre>
+Private Shared L As Lambda = Function(Str As String)
+    Return WAAPIEntry.L(Str.Trim())
+End Function
+</pre>
+
+<img src="images/lambda.jpg" />
+
+<div id="RowCount" title="{{#L}}ROW_COUNT{{/L}}" class="ObjectCount"></div>
+<div class="slideNum">Слайд №{{num}}</div>

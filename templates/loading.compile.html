@@ -1,0 +1,21 @@
+﻿<h1>{{title}}</h1>
+Вставка прямо в html
+<pre>
+&lt;html&gt;<br/>&lt;body onload=&quot;loadUser&quot;&gt;<br/>&lt;div id=&quot;target&quot;&gt;Loading...&lt;/div&gt;<br/>&lt;script id=&quot;template&quot; type=&quot;x-tmpl-mustache&quot;&gt;<br/>Hello {{ name }}!<br/>&lt;/script&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;
+</pre>
+
+Загрузка с сервера
+<pre>
+function loadUser() {
+  $.get('template.mst', function(template) {
+    var rendered = Mustache.render(template, {name: "Luke"});
+    $('#target').html(rendered);
+  });
+}
+</pre>
+
+Использование компилированных шаблонов
+<pre>
+   &lt;script src=&quot;templates.js&quot;&gt;&lt;/script&gt; 
+</pre>
+<div class="slideNum">Слайд №{{num}}</div>

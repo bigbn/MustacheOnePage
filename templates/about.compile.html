@@ -1,0 +1,25 @@
+﻿<h2>{{title}}</h2>
+
+Одноразовый проект. Можно писать так:
+<pre>
+var button = '&lt;div class=&quot;button&quot;&gt;&lt;a title=&quot;Кнопка для нажатий на \&quot;Примечание\&quot;\&quot;
+href=&quot;'+url.href.toString() +'''&quot; style=&quot;width:45px; border: solid 1px&quot;&gt;'
++$.trim(buttonName).escape() +'&lt;/a&gt;&lt;/div&gt;'
+$("#content").append(button);
+</pre>
+
+Серьезный проект. Мужики, так лучше не писать!
+Нам нужен шаблонизатор.
+
+<pre>
+var button = templates.button.render(
+  {   
+    title: 'Кнопка для нажатий на "Примечание"',
+    name: buttonName,
+    url: url
+  }
+)
+$("#content").append(button);
+</pre>
+
+<div class="slideNum">Слайд №{{num}}</div>

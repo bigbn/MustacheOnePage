@@ -1,0 +1,12 @@
+﻿<h2>{{title}}</h2>
+Библиотека Nustache
+<a href="https://github.com/jdiamond/Nustache">https://github.com/jdiamond/Nustache</a>
+<pre>
+   Dim StatusData as Dictionary(of String, String)= TemplateData.Prepare()
+   StatusData("IsFilterEmpty") = String.IsNullOrEmpty(FilterExpression).ToString().ToLower()
+   StatusData("FilteredRecordCount") = FilteredRecordCount
+   StatusData("TotalRecordsCount") = TotalRecordsCount
+   Dim RenderedHtml as String = TemplateData.Render("referenceRecords\status.html", StatusData)
+</pre>  
+
+<div class="slideNum">Слайд №{{num}}</div>

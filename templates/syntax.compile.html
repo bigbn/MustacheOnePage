@@ -1,0 +1,26 @@
+﻿<h1>{{title}}</h1>
+<b>Данные</b> - это объекты, в виде словарей и списков.
+<pre>
+  siteSettings = {
+        title: 'Шаблонизаторы Mustache и Hogan',
+        pages: [{
+          num: 1,
+          title: 'Шаблонизаторы Mustache и Hogan1',
+          content: templates.about.render()
+        }, {
+          num: 2,
+          title: 'Преимущества',
+          content: templates.use.render()
+        }]
+      };
+</pre>
+
+Шаблон это вид разметки с подстановками:
+<img src="template.png" />
+
+<ul>
+  <li>Списки</li>
+  <li>Вложенные шаблоны</li>
+  <li>Произвольные вычисления</li>
+</ul>
+<div class="slideNum">Слайд №{{num}}</div>
